@@ -12,7 +12,7 @@ Python package for analyzing the topology of polymer configurations
 
 ##### Package installation
 ```
-git clone --recurse-submodules -j8 git@github.com:eskoruppa/PlecFinder.git
+git clone --recurse-submodules -j8 https://github.com/eskoruppa/PlecFinder.git
 pip install PlecFinder/.
 ```
 
