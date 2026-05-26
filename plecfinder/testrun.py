@@ -3,7 +3,7 @@ from .IOPolyMC.iopolymc import read_state
 from .plottopol import plot_topol
 
 import time
-import pkg_resources
+from importlib.resources import files
 
 
 def testrun():
@@ -16,8 +16,7 @@ def testrun():
     connect_dist = 25.0
     om0 = 1.76
 
-    resource_package = __name__
-    statefn = pkg_resources.resource_filename(__name__, "examples/s_0p0400_run1.state")
+    statefn = str(files(__package__).joinpath("examples/s_0p0400_run1.state"))
 
     state = read_state(statefn)
     configs = state["pos"]
